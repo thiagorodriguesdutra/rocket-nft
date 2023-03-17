@@ -21,6 +21,10 @@ a {
   font-size: 1.25rem;
 }
 
+li {
+  list-style: none;
+}
+
 body {
   background: var(--body-background);
   color: var(--text-color);
@@ -342,4 +346,107 @@ div.artists_container + footer a:hover {
   text-decoration: underline;
 }
 
+footer.container {
+  margin-top: 9rem;
+  background: var(--card-color);
+}
+
+div.return_to_top {
+  padding-top: 5rem;
+  padding-left: 5rem;
+  padding-right: 5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+div.return_to_top > button {
+  width: 5rem;
+  height: 5rem;
+  background: var(--color-logo);
+  border: 0;
+  cursor: pointer;
+}
+
+div.menu_container {
+  margin-top: 3.75rem;
+  display: flex;
+}
+
+div.menu_container form {
+  padding: 3rem 3rem;
+  width: 100%;
+  max-width: 544px;
+  border: 1px solid var(--subtitle-color);
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+}
+
+div.menu_container nav {
+  width: 100%;
+  border: 1px solid var(--subtitle-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7rem;
+  flex: 1;
+}
+
+div.menu_container form h3 {
+  width: 100%;
+  max-width: 350px;
+  font-weight: 500;
+  font-size: 1.875rem;
+}
+
+div.menu_container form h3 > span {
+  color: var(--color-logo);
+}
+
+div.menu_container form > div {
+  margin-top: 1.5rem;
+  width: 100%;
+  max-width: 357px;
+  display: flex;
+}
+
+div.menu_container form div input {
+  padding: 1rem;
+  width: 100%;
+  max-width: 17.5rem;
+  background: var(--color-input);
+  border: 0;
+  color: var(--text-color);
+}
+
+div.menu_container form div input::placeholder {
+  color: var(--subtitle-color);
+}
+
+div.menu_container form div > button {
+  padding: 1rem;
+  font-weight: 700;
+}
+
+div.social_medias {
+  padding: 3rem 3rem;
+  padding-left: 5rem;
+  padding-right: 5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+div.social_medias a {
+  color: var(--subtitle-color);
+}
+
+div.social_medias a:hover {
+  text-decoration: underline;
+  color: var(--text-color);
+}
 
