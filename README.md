@@ -1,4 +1,4 @@
-# ✅ ROCKET NFTs - Landing Page
+# 🦊 ROCKET NFTs - Landing Page
 <p>This project is a challenge proposed by Rocketseat.</p>
 <p>Este é um desafio proposto pela Rocketseat.</p>
 
