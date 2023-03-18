@@ -15,10 +15,113 @@
   font-family: 'Montserrat', sans-serif;
 }
 
+@media (max-width: 1300px) {
+  #artists_container {
+    justify-content: center;
+    gap: 1rem;
+  }
+
+  #gallery {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr); 
+  }
+}
+
+@media (max-width: 1050px) {
+  html {
+    font-size: 80%;
+  }
+
+  #gallery {
+    grid-template-columns: repeat(2, 1fr);
+    place-items: center;
+  }
+
+  #posts {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 5rem;
+  } 
+
+  #menu_container nav {
+    padding: 2rem 2rem;
+    gap: 2rem;
+  }
+
+  header {
+    text-align: center;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  #main-section {
+    padding-top: 5rem;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap-reverse;
+    gap: 2rem;
+  }
+}
+
+@media (max-width: 865px) {
+  #astronauts_container {
+    justify-content: center;
+  }
+  .astronaut_line {
+    display: none;
+  }
+}
+
+@media (max-width: 639px) {
+  #gallery {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+  }
+
+  #content {
+    display: block;
+  }
+
+  #content .sidebar {
+    padding: 5rem 5rem;
+    gap: 2rem;
+  }
+
+  #menu_container {
+    flex-direction: column;
+  }
+
+  #menu_container form {
+    max-width: none;
+  }
+}
+
+@media (max-width: 540px) {
+  #social_medias {
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+  }
+
+  #return_to_top {
+    flex-direction: column;
+    gap: 3rem;
+  }
+}
+
+
 a {
   text-decoration: none;
   color: inherit;
   font-size: 1.25rem;
+}
+
+a:hover {
+  text-decoration: underline;
 }
 
 li {
@@ -73,7 +176,7 @@ header button {
   gap: 0.875rem;
 }
 
-section.main-section {
+section.main_section {
   margin-top: 5.6rem;
   padding-left: 5rem;
   padding-right: 5rem;
@@ -82,21 +185,23 @@ section.main-section {
   justify-content: space-between;
 }
 
-section.main-section h1 {
+section.main_section h1 {
+  margin-right: 0.5rem;
+  margin-left: 0.5rem;
   max-width: 37.25rem;
   font-size: 3.125rem;
 }
 
-section.main-section h1 span {
+section.main_section h1 span {
   color: var(--color-logo);
 }
 
-div.section-sidebar {
+div.section_sidebar {
   width: 100%;
   max-width: 25rem;
 }
 
-div.section-sidebar p {
+div.section_sidebar p {
   font-size: 1.125rem;
   line-height: 1.2;
 }
@@ -140,7 +245,7 @@ div.gallery img {
 section.content {
   display: grid;
   grid-template-columns: 17.563rem 1fr;
-  grid-template-rows: 22.225rem 18.75rem;
+  grid-template-rows: 1fr;
   grid-template-areas: 
   "sidebar posts"
   "sidebar banner"
@@ -174,8 +279,10 @@ aside.sidebar span {
   display: block;
 }
 
-.posts {
-  padding-top: 4.375rem;
+div.posts {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+  padding-right: 5rem;
   padding-left: 4.25rem;
   grid-area: posts;
 
@@ -183,21 +290,23 @@ aside.sidebar span {
   gap: 2rem;
 }
 
-.posts article {
+div.posts article {
   text-align: left;
   width: 100%;
-  max-width: 435px;
-  height: 7rem;
+  max-width: 435px; 
+
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
 }
 
-.posts p {
+div.posts p {
   font-size: 1.125rem;
   line-height: 1.2;
 }
 
-.posts article > a {
+div.posts article > a {
   display: block;
-  margin-top: 4rem;
   text-decoration: underline;
   line-height: 1.2;
 }
@@ -227,8 +336,8 @@ section.top_week h2 span {
 div.astronauts_container {
   margin-top: 9rem;
   display: flex;
-  justify-content: space-between  ;
-  gap: 15rem;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
 
 div.astronaut_group div + div {
@@ -297,7 +406,6 @@ div.artists_container {
   flex-wrap: wrap;
   justify-content: space-between;
   gap: 7rem;
-  
 }
 
 div.artist_box {
@@ -334,38 +442,40 @@ div.artists_container > div:nth-child(2) span {
   color: var(--text-color);
 }
 
-div.artists_container + footer {
+div.artist_footer {
   margin-top: 3.375rem;
 }
 
-div.artists_container + footer a {
+div.artist_footer a {
   margin-right: 0.875rem;
 }
 
-div.artists_container + footer a:hover {
+div.artist_footer a:hover {
   text-decoration: underline;
 }
 
-footer.container {
-  margin-top: 9rem;
-  background: var(--card-color);
-}
-
-div.return_to_top {
+a.return_to_top {
   padding-top: 5rem;
   padding-left: 5rem;
   padding-right: 5rem;
   display: flex;
   align-items: center;
   justify-content: space-around;
+  scroll-behavior: smooth;
 }
 
-div.return_to_top > button {
+a.return_to_top > button {
   width: 5rem;
   height: 5rem;
   background: var(--color-logo);
   border: 0;
   cursor: pointer;
+}
+
+footer {
+  width: 100%;
+  margin-top: 9rem;
+  background: var(--card-color);
 }
 
 div.menu_container {
@@ -390,20 +500,21 @@ div.menu_container nav {
   width: 100%;
   border: 1px solid var(--subtitle-color);
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: center;
   gap: 7rem;
   flex: 1;
 }
 
-div.menu_container form h3 {
+div.menu_container form label {
   width: 100%;
   max-width: 350px;
   font-weight: 500;
   font-size: 1.875rem;
 }
 
-div.menu_container form h3 > span {
+div.menu_container form label > span {
   color: var(--color-logo);
 }
 
@@ -432,13 +543,29 @@ div.menu_container form div > button {
   font-weight: 700;
 }
 
+div.menu_container nav ul {
+  display: grid;
+  row-gap: 0.875rem;
+}
+
+div.menu_container nav ul li a:hover {
+  text-decoration: underline; 
+}
+
 div.social_medias {
-  padding: 3rem 3rem;
+  padding-top: 3rem;
+  padding-bottom: 2rem;
   padding-left: 5rem;
   padding-right: 5rem;
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
+}
+
+div.social_medias > div {
+  display: flex;
+  gap: 2.5rem;
 }
 
 div.social_medias a {
@@ -448,5 +575,5 @@ div.social_medias a {
 div.social_medias a:hover {
   text-decoration: underline;
   color: var(--text-color);
-}
+} 
 
