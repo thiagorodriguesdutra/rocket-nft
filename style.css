@@ -130,6 +130,7 @@ li {
 
 body {
   background: var(--body-background);
+  text-align: center;
   color: var(--text-color);
 }
 
